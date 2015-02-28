@@ -1,5 +1,5 @@
 body {
-	background:#888;
+	background:chartreuse;
 }
 
 .top-menu .tab {
@@ -20,7 +20,7 @@ body {
 	height:50px;
 }
 
-.container {
+.app-container {
 	width:400px;
 	height:600px;
 	max-width:100%;
@@ -28,6 +28,10 @@ body {
 	margin:auto;
 	background:#fff;
 	overflow-y:auto;
+}
+
+.app-body {
+	margin-top:60px;
 }
 
 .connection-profile {
