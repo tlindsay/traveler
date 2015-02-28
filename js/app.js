@@ -34,6 +34,9 @@ angular.module("traveler", ['ngRoute'])
       $routeProvider.when('/travelerHome', {
         templateUrl:'partials/travelerHome.html'
       });
+      $routeProvider.when('/chat', {
+        templateUrl:'partials/chat.html'
+      });
   })
   
 .controller("main", function($scope, $location) {
