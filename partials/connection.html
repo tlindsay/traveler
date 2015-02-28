@@ -2,8 +2,8 @@
     <h1 class="view-header">Connect with:</h1>
     <div class="row">
     	<div class="col-xs-6">
-    		<h3>So-and-so</h3>
-    		<img class="connection-profile" src="images/profile.png">
+    		<h3>Jonathan Appleseed</h3>
+    		<img class="connection-profile" src="{{selectedImage}}">
     	</div>
     	<div class="col-xs-6">
 		    <button class="btn btn-primary col-xs-12 connection-action" ng-click="goTo('chat');"><span class="icon-bubble"></span> Chat</button>
@@ -14,6 +14,9 @@
     <div class="row">
     	<div class="col-xs-12">
     		<table class="table">
+    			<th>
+    				<h4>Common Interests</h4>
+    			</th>
     			<tr ng-repeat="item in interests">
     				<td class="col-xs-12">{{item}}</td>
     			</tr>

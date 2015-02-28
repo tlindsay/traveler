@@ -2,7 +2,7 @@
     <div ng-show="subView == 0">
         <h1 class="view-header">My trips</h1>
         <p>
-            <button class="btn btn-default" ng-click="goTo('newTrip')"><span class="icon-airplane"></span> New trip</button>
+            <button id="addNewTrip" class="btn btn-default" ng-click="goTo('newTrip')"><span class="icon-airplane"></span> New trip</button>
         </p>
         <table class="table">
             <tr ng-repeat="item in trips">

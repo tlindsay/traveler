@@ -3,7 +3,21 @@ body {
 }
 
 .app {
-	background-color:#eee;
+	background-color:#222;
+	color:#eee;
+}
+
+.navbar-app {
+	background-color:#222;
+	color:#00afff;
+}
+
+.btn-navbar, .navbar-app .btn {
+	color:#00afff;
+}
+
+.btn-primary {
+	background-color: #00afff;
 }
 
 .navbar .icomoon {
@@ -26,7 +40,7 @@ body {
 	max-width:100%;
 	max-height:100vh;
 	margin:auto;
-	background:#fff;
+	background:#eee;
 	overflow-y:auto;
 }
 
@@ -38,7 +52,8 @@ body {
 .connection-profile {
 	width:40%;
 	margin:5%;
-	box-shadow:0 0 2px #ccc;
+	box-shadow:0 0 2px #333;
+	background-image: url('../images/profile.png');
 }
 
 .clear {
@@ -53,8 +68,10 @@ img#map {
 .view-header {
 	width:100%;
 	padding:20px 0 5px 10px;
-	background-color:#eee;
-	border-bottom:1px solid #ddd;
+	background-color:#222;
+	border-bottom:1px solid #222;
+	color:#00afff;
+	/*color:#007aff;*/
 }
 
 .scrollable-content {
@@ -63,4 +80,14 @@ img#map {
 
 .connection-action {
 	margin-top:20px;
+}
+
+#addNewTrip{
+	position:relative;
+	top:-50px;
+	right:-257px;
+}
+
+.btn-default {
+	background-color:#eee;
 }

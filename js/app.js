@@ -45,6 +45,8 @@ angular.module("traveler", ['ngRoute'])
 	$scope.subView = 0;//For tabs in pages
 	$scope.images = [0,1,2,3,4,5,6,7,8,9];//just some dummy values for connection images
 	$scope.alertSuccess = false;
+
+	$scope.selectedImage='';
 	
 	$scope.profile = {};
 	$scope.profile.name = "John Smith";
@@ -59,12 +61,15 @@ angular.module("traveler", ['ngRoute'])
 
 	$scope.interests = ['Skiing', 'Hiking', 'Web Development', 'Music', 'a', 'b', 'c','d','e'];
 	
+	$scope.setImage = function(img) {
+		$scope.selectedImage = 'images/faces/'+img+'.jpg';
+	}
+
 	$scope.goTo = function(page) {
 		console.info('GOING TO %s', page);
 		if(page == 'home') {
 			page = '';
 		}
-
 		$scope.history.push($location.path());
 		$location.path('/'+page);
 		$scope.subView = 0;//Reset the tab to the default every time a new page is loaded
