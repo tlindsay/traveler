@@ -1,5 +1,5 @@
 body {
-	background:chartreuse;
+	background:#888;
 }
 
 .app {
@@ -14,6 +14,10 @@ body {
 	width:100%;
 	margin:10px 0;
 	height:50px;
+}
+
+#home h1 {
+	margin-top:45px;
 }
 
 .app-container {
@@ -59,23 +63,4 @@ img#map {
 
 .connection-action {
 	margin-top:20px;
-}
-
-#chat {
-	background-color:#fff;
-}
-
-#chat .view-header {
-	background-color:#fff;
-}
-
-.chat-input {
-	width:100%;
-	border-radius:20px;
-}
-
-.chat-keyboard {
-	width:100%;
-	/*background-image: url('../images/keyboard.jpg');*/
-	/*background-size:cover;*/
 }
