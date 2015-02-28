@@ -2,13 +2,16 @@
     <div ng-show="subView == 0">
         <h1 class="view-header">My trips</h1>
         <p>
-            <button class="btn btn-default" ng-click="goTo('newTrip')">New trip</button>
+            <button class="btn btn-default" ng-click="goTo('newTrip')"><span class="icon-airplane"></span> New trip</button>
         </p>
         <table class="table">
             <tr ng-repeat="item in trips">
-                <td class="col-xs-9" ng-click="goTo('connections'); selectedTrip = 'check';">{{item}}</td>
+                <td class="col-xs-6">{{item}}</td>
                 <td class="col-xs-3">
-                    <button class="btn btn-default" ng-click="goTo('editTrip');">Edit</button>
+                    <button class="btn btn-default" ng-click="goTo('connections'); selectedTrip = 'check';"><span class="icon-users"></span> Connect</button>
+                </td>
+                <td class="col-xs-3">
+                    <button class="btn btn-default" ng-click="goTo('editTrip');"><span class="icon-cog"></span> Edit</button>
                 </td>
             </tr>
         </table>
