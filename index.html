@@ -20,6 +20,14 @@
 		
 		<div class="app">
 			<div class="navbar navbar-app navbar-absolute-top">
+				<div ng-show="history.length > 0" class="pull-left">
+					<button id="back" class="btn btn-navbar">&larr;</button>
+				</div>
+				<div class="navbar-brand navbar-brand-left">Footsteps</div>
+				<div class="btn-group pull-right">
+					<button ng-click="goTo('');" class="btn btn-navbar">Home</button>
+					<button ng-click="goTo('profile');" class="btn btn-navbar">Profile</button>
+				</div>
 			</div>
 		
 			<div class="app-body">

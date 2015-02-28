@@ -55,6 +55,10 @@ angular.module("traveler", ['ngRoute'])
 	$scope.trips = ['Tokyo, Japan','Madrid, Spain','Kuala Lumpur, Malaysia'];//sample trips the user has
 	
 	$scope.goTo = function(page) {
+		if(page == 'home') {
+			page = '';
+		}
+		
 		$scope.history.push($scope.view);
 		$location.path('/'+page);
 		$scope.subView = 0;//Reset the tab to the default every time a new page is loaded
