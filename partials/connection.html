@@ -1,8 +1,23 @@
 <div id="connection" class="col-lg-12 col-xs-12">
-    <h1>Connect with:</h1>
-    <h3>So-and-so</h3>
-    <img class="connection-profile" src="images/profile.png">
+    <h1 class="view-header">Connect with:</h1>
+    <div class="row">
+    	<div class="col-xs-6">
+    		<h3>So-and-so</h3>
+    		<img class="connection-profile" src="images/profile.png">
+    	</div>
+    	<div class="col-xs-6">
+		    <button class="btn btn-primary col-xs-12 connection-action" ng-click="goTo('chat');">Chat</button>
+		    <button class="btn btn-primary col-xs-12 connection-action" ng-click="goTo('scheduleActivity');">Suggest Activities</button>
+    	</div>
+    </div>
     <div class="clear"></div>
-    <button class="btn btn-primary" ng-click="goTo('bookLodging');">Book Lodging</button>
-    <button class="btn btn-primary" ng-click="goTo('scheduleActivity');">Schedule Activity</button>
+    <div class="row">
+    	<div class="col-xs-12">
+    		<table class="table">
+    			<tr ng-repeat="item in interests">
+    				<td class="col-xs-12">{{item}}</td>
+    			</tr>
+    		</div>
+    	</div>
+    </div>
 </div>

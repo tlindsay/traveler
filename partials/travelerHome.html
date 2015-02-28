@@ -1,13 +1,13 @@
 <div id="travelerHome" class="col-lg-12 col-xs-12">
     <div ng-show="subView == 0">
-        <h1>My trips</h1>
+        <h1 class="view-header">My trips</h1>
         <p>
             <button class="btn btn-default" ng-click="goTo('newTrip')">New trip</button>
         </p>
         <table class="table">
             <tr ng-repeat="item in trips">
                 <td class="col-xs-9" ng-click="goTo('connections'); selectedTrip = 'check';">{{item}}</td>
-                <td>
+                <td class="col-xs-3">
                     <button class="btn btn-default" ng-click="goTo('editTrip');">Edit</button>
                 </td>
             </tr>

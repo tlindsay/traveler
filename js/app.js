@@ -53,6 +53,8 @@ angular.module("traveler", ['ngRoute'])
 	$scope.selectedTrip = '';//variable to store selected trip
 	
 	$scope.trips = ['Tokyo, Japan','Madrid, Spain','Kuala Lumpur, Malaysia'];//sample trips the user has
+
+	$scope.interests = ['Skiing', 'Hiking', 'Web Development', 'Music', 'a', 'b', 'c','d','e'];
 	
 	$scope.goTo = function(page) {
 		console.info('GOING TO %s', page);

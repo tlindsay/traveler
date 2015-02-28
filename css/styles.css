@@ -2,6 +2,10 @@ body {
 	background:chartreuse;
 }
 
+.app {
+	background-color:#eee;
+}
+
 .top-menu .tab {
 	height:10vh;
 	line-height:10vh;
@@ -31,7 +35,8 @@ body {
 }
 
 .app-body {
-	margin-top:60px;
+	padding-top:50px;
+	overflow:auto;
 }
 
 .connection-profile {
@@ -47,4 +52,19 @@ body {
 img#map {
 	width:80%;
 	margin:5px 10%;
+}
+
+.view-header {
+	width:100%;
+	padding:20px 0 5px 10px;
+	background-color:#eee;
+	border-bottom:1px solid #ddd;
+}
+
+.scrollable-content {
+	padding-top:70px;
+}
+
+.connection-action {
+	margin-top:20px;
 }
