@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Traveler</title>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="js/app.js"></script>
+</head>
+<body ng-app="traveler">
+<div class="container">
+	<div class="row">
+		<div ng-controller="main">
+			<div id="home" class="col-lg-12 col-xs-12" ng-show="view == 'home'">
+				<button class="btn btn-success" ng-click="goTo('travelerHome');">Traveler</button>
+				<button class="btn btn-danger" ng-click="goTo('hostHome');">Host</button>
+			</div>
+			<div id="travelerHome" class="col-lg-12 col-xs-12" ng-show="view == 'travelerHome'">
+				<h1>Traveler View</h1>
+				<button class="btn btn-info" ng-click="goTo('connections');">Go to Connections</button>
+				<button class="btn btn-primary" ng-click="goTo('home');">Home</button>
+			</div>
+			<div id="hostHome" class="col-lg-12 col-xs-12" ng-show="view == 'hostHome'">
+				<h1>Host View</h1>
+				<p>I HAVE NO IDEA WHAT TO PUT HERE RIGHT NOW!</p>
+				<button class="btn btn-primary" ng-click="goTo('home');">Home</button>
+			</div>
+			<div id="connections" class="col-lg-12 col-xs-12" ng-show="view == 'connections'">
+				<h1>Connections View</h1>
+				<button class="btn btn-warning" ng-click="goTo('connection');">Go to Connection</button>
+				<button class="btn btn-primary" ng-click="goTo('home');">Home</button>
+			</div>
+			<div id="connection" class="col-lg-12 col-xs-12" ng-show="view == 'connection'">
+				<h1>Connection View</h1>
+				<button class="btn btn-danger" ng-click="goTo('bookLodging');">Book Lodging</button>
+				<button class="btn btn-success" ng-click="goTo('scheduleActivity');">Schedule Activity</button>
+				<button class="btn btn-primary" ng-click="goTo('home');">Home</button>
+			</div>
+			<div id="bookLodging" class="col-lg-12 col-xs-12" ng-show="view == 'bookLodging'">
+				<h1>Book Lodging View</h1>
+				<button class="btn btn-primary" ng-click="goTo('home');">Home</button>
+			</div>
+			<div id="scheduleActivity" class="col-lg-12 col-xs-12" ng-show="view == 'scheduleActivity'">
+				<h1>Schedule Activity View</h1>
+				<button class="btn btn-primary" ng-click="goTo('home');">Home</button>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
