@@ -20,10 +20,6 @@ body {
 	height:50px;
 }
 
-/*#travelerHome .top-menu .tab {
-	width:50%;
-}*/
-
 .container {
 	width:400px;
 	height:600px;
@@ -42,4 +38,9 @@ body {
 
 .clear {
 	clear:both;
+}
+
+img#map {
+	width:80%;
+	margin:5px 10%;
 }
