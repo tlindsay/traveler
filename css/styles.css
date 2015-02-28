@@ -60,3 +60,22 @@ img#map {
 .connection-action {
 	margin-top:20px;
 }
+
+#chat {
+	background-color:#fff;
+}
+
+#chat .view-header {
+	background-color:#fff;
+}
+
+.chat-input {
+	width:100%;
+	border-radius:20px;
+}
+
+.chat-keyboard {
+	width:100%;
+	/*background-image: url('../images/keyboard.jpg');*/
+	/*background-size:cover;*/
+}
