@@ -65,6 +65,10 @@ angular.module("traveler", ['ngRoute'])
 		$scope.selectedImage = 'images/faces/'+img+'.jpg';
 	}
 
+	$scope.setTrip = function(trip) {
+		$scope.selectedTrip = trip;
+	}
+
 	$scope.goTo = function(page) {
 		console.info('GOING TO %s', page);
 		if(page == 'home') {

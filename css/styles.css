@@ -97,6 +97,10 @@ img#map {
 	width:100%;
 }
 
+#connections .view-header {
+	font-size:24px;
+}
+
 .chat-keyboard {
 	width:100%;
 	height:150px;

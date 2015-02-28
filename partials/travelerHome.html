@@ -8,7 +8,7 @@
             <tr ng-repeat="item in trips">
                 <td class="col-xs-6">{{item}}</td>
                 <td class="col-xs-3">
-                    <button class="btn btn-default" ng-click="goTo('connections'); selectedTrip = 'check';"><span class="icon-users"></span> Connect</button>
+                    <button class="btn btn-default" ng-click="setTrip(item); goTo('connections');"><span class="icon-users"></span> Connect</button>
                 </td>
                 <td class="col-xs-3">
                     <button class="btn btn-default" ng-click="goTo('editTrip');"><span class="icon-cog"></span> Edit</button>
