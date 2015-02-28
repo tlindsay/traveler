@@ -7,7 +7,7 @@
 	<script src="bower_components/angular-route/angular-route.js"></script>
 	<script src="bower_components/mobile-angular-ui/dist/js/mobile-angular-ui.min.js"></script>
 
-	<meta id="meta" name="viewport" content="width=device-width; initial-scale=1.0" />
+	<meta id="meta" name="viewport" content="width=device-width, initial-scale=1.0" />
 
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="stylesheet" href="icons.css">
@@ -18,20 +18,19 @@
 	<div class="app-container">
 		<div class="sidebar sidebar-left"></div>
 		
-		<div class="app">
+		<div class="app" ng-controller="main">
 			<div class="navbar navbar-app navbar-absolute-top">
 				<div ng-show="history.length > 0" class="pull-left">
 					<button id="back" class="btn btn-navbar">&larr;</button>
 				</div>
 				<div class="navbar-brand navbar-brand-left">Footsteps</div>
 				<div class="btn-group pull-right">
-					<button ng-click="goTo('');" class="btn btn-navbar">Home</button>
-					<button ng-click="goTo('profile');" class="btn btn-navbar">Profile</button>
+					<a ng-click="goTo('home');" class="btn btn-navbar">Home</a>
+					<a ng-click="goTo('profile');" class="btn btn-navbar">Profile</a>
 				</div>
 			</div>
-		
 			<div class="app-body">
-				<div class="app-content" ng-controller="main">
+				<div class="app-content">
 					<ng-view></ng-view>
 				</div>
 			</div>
