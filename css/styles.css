@@ -6,16 +6,8 @@ body {
 	background-color:#eee;
 }
 
-.top-menu .tab {
-	height:10vh;
-	line-height:10vh;
-	vertical-align:middle;
-	background:#ddd;
-	display:inline-block;
-	text-align:center;
-	box-shadow: 0 0 5px #888 inset;
-	width:33.33333333%;
-	font-size:22px;
+.navbar .icomoon {
+	font-size:20px;
 }
 
 #home .btn {
