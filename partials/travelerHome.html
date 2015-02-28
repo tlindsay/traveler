@@ -1,0 +1,19 @@
+<div id="travelerHome" class="col-lg-12 col-xs-12" ng-show="view == 'travelerHome'">
+    <div ng-show="subView == 0">
+        <h1>My trips</h1>
+        <p>
+            <button class="btn btn-default" ng-click="goTo('newTrip')">New trip</button>
+        </p>
+        <table class="table">
+            <tr ng-repeat="item in trips">
+                <td class="col-xs-9" ng-click="goTo('connections'); selectedTrip = 'check';">{{item}}</td>
+                <td>
+                    <button class="btn btn-default" ng-click="goTo('editTrip');">Edit</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div ng-show="subView == 1">
+        <h1>Edit Profile</h1>
+    </div>
+</div>

@@ -2,10 +2,10 @@
 <html>
 <head>
 	<title>Traveler</title>
-	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="bower_components/mobile-angular-ui/dist/css/mobile-angular-ui-base.css	">
 	<script src="bower_components/angular/angular.js"></script>
-	<script src="bower_components/jquery/dist/jquery.js"></script>
-	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="bower_components/angular-route/angular-route.js"></script>
+	<script src="bower_components/mobile-angular-ui/dist/js/mobile-angular-ui.min.js"></script>
 
 	<meta id="meta" name="viewport" content="width=device-width; initial-scale=1.0" />
 
@@ -15,106 +15,19 @@
 	<script src="js/app.js"></script>
 </head>
 <body ng-app="traveler">
-<div class="container">
-	<div class="row">
-		<div ng-controller="main">
-			
-			<div class="top-menu icomoon">
-				<div class="tab" ng-click="back()"><span class="icon-undo2"></span></div><div class="tab" ng-click="goTo('home');"><span class="icon-home"></span></div><div class="tab" ng-click="goTo('profile');"><span class="icon-user"></span></div>
-			</div>
-			
-			<div class="alert alert-success" ng-show="alertSuccess">Changes saved</div>
-				
-			<div id="home" class="col-lg-12 col-xs-12" ng-show="view == 'home'">
-				<h1 class="text-center">I am a:</h1>
-				<button class="btn btn-primary" ng-click="goTo('travelerHome');">Traveler</button>
-				<button class="btn btn-primary" ng-click="goTo('hostHome');">Host</button>
-			</div>
-			
-			<div id="profile" class="col-lg-12 col-xs-12" ng-show="view == 'profile'">
-				<h1>Profile</h1>
-				<div class="form-group">
-					<label>Name</label>
-					<input type="text" ng-model="profile.name" class="form-control">
-				</div>
-				<div class="form-group">
-					<label>Hometown</label>
-					<input type="text" ng-model="profile.hometown" class="form-control">
-				</div>
-				<div class="form-group">
-					<label>Bio</label>
-					<textarea class="form-control">Hello world!</textarea>
-				</div>
-				<button class="btn btn-primary" ng-model="profile.bio" ng-click="back();alertSuccess = true;">Save</button>
-				<button class="btn btn-default" ng-click="back();">Cancel</button>
-			</div>
-				
-			<div id="travelerHome" class="col-lg-12 col-xs-12" ng-show="view == 'travelerHome'">
-				<div ng-show="subView == 0">
-					<h1>My trips</h1>
-					<p><button class="btn btn-default" ng-click="goTo('newTrip')">New trip</button></p>
-					<table class="table">
-						<tr ng-repeat = "item in trips">
-							<td class="col-xs-9" ng-click="goTo('connections'); selectedTrip = 'check';">{{item}}</td>
-							<td><button class="btn btn-default" ng-click="goTo('editTrip');">Edit</button></td>
-						</tr>
-					</table>
-				</div>
-				<div ng-show="subView == 1">
-					<h1>Edit Profile</h1>
-				</div>
-			</div>
-			
-			<div id="editTrip" class="col-lg-12 col-xs-12" ng-show="view == 'editTrip'">
-				<h1>Edit Trip</h1>
-				<h3>Where would you like to go?</h3>
-				<button class="btn btn-primary">Change location</button>
-				<h3>What would you like to do?</h3>
-				<button class="btn btn-primary">Edit interests</button>
-			</div>
-			
-			<div id="newTrip" class="col-lg-12 col-xs-12" ng-show="view == 'newTrip'">
-				<h1>New Trip</h1>
-				<h3>Where would you like to go?</h3>
-				<img class=<img id="map img-thumbnail" src="images/map.jpg" ng-click="goTo('newTripInterests')">
-			</div>
-			
-			<div id="newTripInterests" class="col-lg-12 col-xs-12" ng-show="view == 'newTripInterests'">
-				<h1>New Trip: {{newTrip.location.city}}</h1>
-				<h3>What are your interests?</h3>
-			</div>
-				
-			<div id="hostHome" class="col-lg-12 col-xs-12" ng-show="view == 'hostHome'">
-				<h1>Host View</h1>
-				<p>I HAVE NO IDEA WHAT TO PUT HERE RIGHT NOW!</p>
-				<button class="btn btn-primary" ng-click="goTo('home');">Home</button>
-			</div>
-				
-			<div id="connections" class="col-lg-12 col-xs-12" ng-show="view == 'connections'">
-				<h1>Connections for {{trip}}</h1>
-				<img class="connection-profile" src="images/profile.png" ng-repeat="image in images" ng-click="goTo('connection');">
-			</div>
-				
-			<div id="connection" class="col-lg-12 col-xs-12" ng-show="view == 'connection'">
-				<h1>Connect with:</h1>
-				<h3>So-and-so</h3>
-				<img class="connection-profile" src="images/profile.png">
-				<div class="clear"></div>
-				<button class="btn btn-primary" ng-click="goTo('bookLodging');">Book Lodging</button>
-				<button class="btn btn-primary" ng-click="goTo('scheduleActivity');">Schedule Activity</button>
-			</div>
-				
-			<div id="bookLodging" class="col-lg-12 col-xs-12" ng-show="view == 'bookLodging'">
-				<h1>Book Lodging View</h1>
-				<button class="btn btn-primary" ng-click="goTo('home');">Home</button>
-			</div>
-				
-			<div id="scheduleActivity" class="col-lg-12 col-xs-12" ng-show="view == 'scheduleActivity'">
-				<h1>Schedule Activity View</h1>
-				<button class="btn btn-primary" ng-click="goTo('home');">Home</button>
+	<div class="sidebar sidebar-left"></div>
+
+	<div class="app">
+		<div class="navbar navbar-app navbar-absolute-top"></div>
+
+		<div class="app-body">
+			<div class="app-content">
+				<ng-view></ng-view>
 			</div>
 		</div>
 	</div>
+
+	<div ui-yield-to="modals"></div>
 </div>
 </body>
 </html>
