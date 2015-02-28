@@ -15,20 +15,23 @@
 	<script src="js/app.js"></script>
 </head>
 <body ng-app="traveler">
-	<div class="app-container">
+	<div class="app-container"  ng-controller="main">
 		<div class="sidebar sidebar-left"></div>
 		
-		<div class="app" ng-controller="main">
+		<div class="app">
 			<div class="navbar navbar-app navbar-absolute-top">
 				<div ng-show="history.length > 0" class="pull-left">
-					<button id="back" class="btn btn-navbar">&larr;</button>
+					<button ng-click="goBack();" id="back" class="btn btn-navbar">&larr;</button>
 				</div>
+
 				<div class="navbar-brand navbar-brand-left">Footsteps</div>
+
 				<div class="btn-group pull-right">
 					<a ng-click="goTo('home');" class="btn btn-navbar">Home</a>
 					<a ng-click="goTo('profile');" class="btn btn-navbar">Profile</a>
 				</div>
 			</div>
+
 			<div class="app-body">
 				<div class="app-content">
 					<ng-view></ng-view>
