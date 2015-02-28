@@ -91,3 +91,13 @@ img#map {
 .btn-default {
 	background-color:#eee;
 }
+
+.chat-input {
+	border-radius:15px;
+	width:100%;
+}
+
+.chat-keyboard {
+	width:100%;
+	height:150px;
+}
