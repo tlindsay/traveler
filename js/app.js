@@ -1,8 +1,8 @@
-angular.module("traveler", ['ngRoute'])
+angular.module("traveler", ['mobile-angular-ui','ngRoute'])
 
 .config(function($routeProvider) {
       $routeProvider.when('/', {
-        templateUrl:'partials/home.html'
+        templateUrl:'partials/travelerHome.html'
       });
       $routeProvider.when('/bookLodging', {
         templateUrl:'partials/bookLodging.html'
@@ -47,6 +47,10 @@ angular.module("traveler", ['ngRoute'])
 	$scope.alertSuccess = false;
 
 	$scope.selectedImage='';
+
+	$scope.fuckery = {
+		fucked : true
+	};
 	
 	$scope.profile = {};
 	$scope.profile.name = "John Smith";
@@ -59,7 +63,44 @@ angular.module("traveler", ['ngRoute'])
 	
 	$scope.trips = ['Tokyo, Japan','Madrid, Spain','Kuala Lumpur, Malaysia'];//sample trips the user has
 
-	$scope.interests = ['Skiing', 'Hiking', 'Web Development', 'Music', 'a', 'b', 'c','d','e'];
+	$scope.interests = [
+		{
+			name: 'Skiing',
+			fuckery: 0
+		},
+		{
+			name: 'Hiking',
+			fuckery: 0
+		},
+		{
+			name: 'Web Development',
+			fuckery: 0
+		},
+		{
+			name: 'Music',
+			fuckery: 0
+		},
+		{
+			name: 'a',
+			fuckery: 0
+		},
+		{
+			name: 'b',
+			fuckery: 0
+		},
+		{
+			name: 'c',
+			fuckery: 0
+		},
+		{
+			name: 'd',
+			fuckery: 0
+		},
+		{
+			name: 'e',
+			fuckery: 0
+		}
+	];
 	
 	$scope.setImage = function(img) {
 		$scope.selectedImage = 'images/faces/'+img+'.jpg';
@@ -87,3 +128,8 @@ angular.module("traveler", ['ngRoute'])
 		}
 	}
 });
+
+function changeToGreen(button) {
+	jQuery(button).removeClass('btn-primary');
+	jQuery(button).addClass('btn-success');
+}

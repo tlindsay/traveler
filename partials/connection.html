@@ -7,7 +7,7 @@
     	</div>
     	<div class="col-xs-6">
 		    <button class="btn btn-primary col-xs-12 connection-action" ng-click="goTo('chat');"><span class="icon-bubble"></span> Chat</button>
-		    <button class="btn btn-primary col-xs-12 connection-action" ng-click="goTo('scheduleActivity');"><span class="icon-glass"></span> Suggest Activities</button>
+		    <button class="btn btn-primary col-xs-12 connection-action" onclick="changeToGreen(this);"><span class="icon-glass"></span> Suggest Activities</button>
     	</div>
     </div>
     <div class="clear"></div>
@@ -18,7 +18,8 @@
     				<h4 style="color:#00afff;">Common Interests</h4>
     			</th>
     			<tr ng-repeat="item in interests">
-    				<td class="col-xs-12">{{item}}</td>
+    				<td class="col-xs-10">{{item.name}}</td>
+    				<td class="col-xs-2"><ui-switch ng-model="item.fuckery"></ui-switch></td>
     			</tr>
     		</div>
     	</div>
