@@ -2,7 +2,7 @@ angular.module("traveler", ['mobile-angular-ui','ngRoute'])
 
 .config(function($routeProvider) {
       $routeProvider.when('/', {
-        templateUrl:'partials/travelerHome.html'
+        templateUrl:'partials/home.html'
       });
       $routeProvider.when('/bookLodging', {
         templateUrl:'partials/bookLodging.html'
