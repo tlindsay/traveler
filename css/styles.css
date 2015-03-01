@@ -85,7 +85,7 @@ img#map {
 #addNewTrip{
 	position:relative;
 	top:-50px;
-	right:-257px;
+	right:-75%;
 }
 
 .btn-default {
