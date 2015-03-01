@@ -61,8 +61,10 @@ body {
 }
 
 img#map {
-	width:80%;
-	margin:5px 10%;
+	width:90%;
+	display:block;
+	margin:5px auto;
+	height: 200px;
 }
 
 .view-header {
